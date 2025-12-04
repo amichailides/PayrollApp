@@ -46,7 +46,7 @@ public class Main {
                 .forEach(System.out::println);
 
 
-        */
+
 
 
                 employees.stream()
@@ -55,9 +55,32 @@ public class Main {
                         .distinct()
                         .forEach(System.out::println);
 
+         */
+
                 Map<String,List<Employee>> departmentGroup = employees.stream()
                         .collect(Collectors.groupingBy(Employee::getDepartment));
-                        //.forEach(Map.Entry<String, List<Employee>>);
+
+        BigDecimal maxSalary = BigDecimal.ZERO;
+        String maxDepartment = null;
+        for (Map.Entry<String, List<Employee>> dep : departmentGroup.entrySet()) {
+            String key = dep.getKey();
+            List<Employee> value = dep.getValue();
+
+            BigDecimal depSalary = BigDecimal.ZERO;
+
+            for (Employee emp : value) {
+                depSalary = depSalary.add(emp.getSalary());
+            }
+            System.out.printf("%s salary -> %s %n", key, depSalary);
+
+            if (depSalary.compareTo(maxSalary) > 0) {
+                maxSalary = depSalary;
+                maxDepartment = key;
+            }
+
+        }
+
+        System.out.printf("Department with highest total salary: %s (%s) ", maxDepartment, maxSalary);
 
 
 
