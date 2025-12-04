@@ -1,0 +1,6 @@
+Mixos,IT,200.5
+Matsablokos,IT,23
+Giannis,IT,900
+Maria,HR,1800
+Alex,Finance,2200
+Dora,IT,1500
