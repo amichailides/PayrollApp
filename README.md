@@ -10,3 +10,4 @@ Small practice project for learning Java OOP and Git workflow (Coding Factory ex
 ## Notes
 This is a learning playground project, not a production application.
 
+small change from github UI
