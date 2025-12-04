@@ -119,4 +119,22 @@ public class Employee {
                 firstName, lastName, role, department.getName(), getMaritalStatus().getLabel(), overtimeHours);
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", department=" + department +
+                ", role=" + role +
+                ", employmentType=" + employmentType +
+                ", birthday=" + birthday +
+                ", maritalStatus=" + maritalStatus +
+                ", numberOfChildren=" + numberOfChildren +
+                ", baseSalary=" + baseSalary +
+                ", overtimeHours=" + overtimeHours +
+                ", policy=" + policy +
+                '}';
+    }
 }
